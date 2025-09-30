@@ -1,0 +1,2592 @@
+{
+	"info": {
+		"_postman_id": "74b1a0f2-9854-4383-8e16-dbd4190b89a6",
+		"name": "PSG Financial Services DEV Mock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36524844"
+	},
+	"item": [
+		{
+			"name": "QuickBooksExport",
+			"item": [
+				{
+					"name": "Get Requests",
+					"item": [
+						{
+							"name": "[200] QBExport",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{apikey}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-aff6dbfd-0628-407d-8ae9-473287bb1f6c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}/qbexport?dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}"
+									],
+									"path": [
+										"qbexport"
+									],
+									"query": [
+										{
+											"key": "dateStart",
+											"value": "2022-12-06"
+										},
+										{
+											"key": "dateEnd",
+											"value": "2022-12-07"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_Number}}"
+											},
+											{
+												"key": "x-api-key",
+												"value": "{{apikey}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 18:23:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.financials.api-v1+json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-RateLimit-Limit-Second",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining-Second",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "RateLimit-Reset",
+											"value": "1"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://dev-www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "776b5dec-1940-464a-a075-4847b0f5b771"
+										},
+										{
+											"key": "X-Kong-Upstream-Latency",
+											"value": "4503"
+										},
+										{
+											"key": "X-Kong-Proxy-Latency",
+											"value": "25"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"invoices\": [\n        {\n            \"hdr\": {\n                \"accountNumber\": \"674599972\",\n                \"currencyCd\": null,\n                \"custPurchOrdNum\": \"\",\n                \"purchOrdNum\": \"OE0176288Q701317\",\n                \"invAmt\": 119.8,\n                \"invAmtWithTax\": 126.99,\n                \"sherlinkInvAmt\": 126.99,\n                \"totalTax\": 7.19,\n                \"invoiceId\": {\n                    \"tranDt\": \"2022-12-06\",\n                    \"termNum\": 11370,\n                    \"tranNum\": 54993\n                },\n                \"store\": {\n                    \"num\": 1317,\n                    \"numCcn\": \"701317\",\n                    \"name\": \"MT PLEASANT\"\n                },\n                \"unitNo\": \"1416 S MISSION ST\",\n                \"tranCode\": \"10\",\n                \"custJob\": {\n                    \"num\": 1,\n                    \"name\": \"ALEXANDER PAINTING LLC\"\n                }\n            },\n            \"line\": [\n                {\n                    \"num\": 1,\n                    \"qty\": 5,\n                    \"itemAmt\": 23.96,\n                    \"extendedTot\": 119.8,\n                    \"disc\": 0,\n                    \"gallons\": 5,\n                    \"item\": {\n                        \"salesNum\": \"650865033\",\n                        \"rexNum\": \"B20W12651\",\n                        \"desc\": \"PM 200 0 EG EXTRA\",\n                        \"prodNum\": \"B20W12651\",\n                        \"hearsDesc\": \"PM 200 0 EG EXTRA\",\n                        \"color\": {\n                            \"num\": \"SW7566\",\n                            \"name\": \"WESTHIGHLAND WHITE\"\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] QBExport Invalid Date",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{apikey}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-68893259-6033-4b28-97d3-2d0aac464763",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-1207",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-1207"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_Number}}"
+											}
+										],
+										"url": {
+											"raw": "https://9e503423-285c-4271-a3ae-32e3aa7a52a1.mock.pstmn.io/psg-financials-service/invoices/qbexport",
+											"protocol": "https",
+											"host": [
+												"9e503423-285c-4271-a3ae-32e3aa7a52a1",
+												"mock",
+												"pstmn",
+												"io"
+											],
+											"path": [
+												"psg-financials-service",
+												"invoices",
+												"qbexport"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 18:26:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.financials.api-v1+json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-RateLimit-Limit-Second",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining-Second",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "RateLimit-Reset",
+											"value": "1"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://dev-www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "7bf112ed-d662-49a2-a8c4-6c5f71035f9a"
+										},
+										{
+											"key": "X-Kong-Upstream-Latency",
+											"value": "2095"
+										},
+										{
+											"key": "X-Kong-Proxy-Latency",
+											"value": "20"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"timestamp\": \"2025-07-21 18:26:50\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"field\": \"dateEnd\",\n            \"rejectedValue\": \"2022-1207\",\n            \"message\": \"Date must be in this format yyyy-mm-dd.\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "[401] QBExport Missing Auth Header",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}",
+										"type": "text"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-match-request-headers",
+										"value": "Account-Number, Accept",
+										"type": "text"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{apikey}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-576b47be-22f5-41eb-b544-547e6aee978e",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Accept",
+												"value": "application/vnd.financials.api-v1+json",
+												"type": "text"
+											},
+											{
+												"key": "Account-Number",
+												"value": "674599972",
+												"type": "text"
+											},
+											{
+												"key": "x-mock-match-request-headers",
+												"value": " Accept, Account-Number",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 15:31:46 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "26"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff; always"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN; always"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "43e23932-0ba0-4298-8ddb-004970c9b487"
+										},
+										{
+											"key": "X-Kong-Response-Latency",
+											"value": "2"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthorized\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[403] QBExport No Permission",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_No_Permission}}"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-d342f16b-6d08-4db7-8610-75d39635c9c0",
+										"type": "text"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_No_Permission}}"
+											}
+										],
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+											]
+										}
+									},
+									"status": "No Permission",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 18:38:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.financials.api-v1+json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-RateLimit-Limit-Second",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining-Second",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "RateLimit-Reset",
+											"value": "1"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://dev-www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "25fc7df9-7fa1-4a2c-8a62-fd8283fba87e"
+										},
+										{
+											"key": "X-Kong-Upstream-Latency",
+											"value": "2964"
+										},
+										{
+											"key": "X-Kong-Proxy-Latency",
+											"value": "22"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 403,\n    \"timestamp\": \"2025-07-21 18:38:49\",\n    \"title\": \"No Permission\",\n    \"detailMessage\": \"No Permission\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] QBExport Not Linked Account Number",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Not_Linked}}"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-b7f7bd5f-4fdf-4e15-a2a4-b4b7e4e49970",
+										"type": "text"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_Not_Linked}}"
+											}
+										],
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 18:39:30 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.financials.api-v1+json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-RateLimit-Limit-Second",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining-Second",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "RateLimit-Reset",
+											"value": "1"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://dev-www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "4777e0cd-2081-4256-8356-cf15a0c3c8b8"
+										},
+										{
+											"key": "X-Kong-Upstream-Latency",
+											"value": "2275"
+										},
+										{
+											"key": "X-Kong-Proxy-Latency",
+											"value": "18"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"timestamp\": \"2025-07-21 18:39:30\",\n    \"title\": \"Account not found\",\n    \"detailMessage\": \"Account not found\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Post Requests",
+					"item": [
+						{
+							"name": "[200] QBExport",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-54adb31b-cb73-4a29-8d4c-09d5a7b063c9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] QBExport",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_Number}}"
+											},
+											{
+												"key": "x-api-key",
+												"value": "{{x-api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "x-mock-response-id",
+												"value": "36524844-54adb31b-cb73-4a29-8d4c-09d5a7b063c9",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}dateStart=2022-12-06&dateEnd=2022-12-07"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"body": "{\n    \"invoices\": [\n        {\n            \"hdr\": {\n                \"accountNumber\": \"674599972\",\n                \"currencyCd\": null,\n                \"custPurchOrdNum\": \"COVENANT\",\n                \"purchOrdNum\": \"OE0222244A701906\",\n                \"invAmt\": 484.9,\n                \"invAmtWithTax\": 518.84,\n                \"sherlinkInvAmt\": 518.84,\n                \"totalTax\": 33.94,\n                \"invoiceId\": {\n                    \"tranDt\": \"2022-05-25\",\n                    \"termNum\": 16206,\n                    \"tranNum\": 26505\n                },\n                \"store\": {\n                    \"num\": 1906,\n                    \"numCcn\": \"701906\",\n                    \"name\": \"WEST LAFAYETTE\"\n                },\n                \"unitNo\": \"931 SAGAMORE PKWY W\",\n                \"tranCode\": \"11\",\n                \"custJob\": {\n                    \"num\": 1,\n                    \"name\": \"ALEXANDER PAINTING LLC\"\n                }\n            },\n            \"line\": [\n                {\n                    \"num\": 4,\n                    \"qty\": 1,\n                    \"itemAmt\": 17.49,\n                    \"extendedTot\": 17.49,\n                    \"disc\": 0,\n                    \"gallons\": 0,\n                    \"item\": {\n                        \"salesNum\": \"650859507\",\n                        \"rexNum\": \"\",\n                        \"desc\": \"3 CLEARCUT ELITE GLI\",\n                        \"prodNum\": \"144152830\",\n                        \"hearsDesc\": \"3 CLEARCUT ELITE GLI\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                },\n                {\n                    \"num\": 5,\n                    \"qty\": 2,\n                    \"itemAmt\": 8.15,\n                    \"extendedTot\": 16.3,\n                    \"disc\": 0,\n                    \"gallons\": 0,\n                    \"item\": {\n                        \"salesNum\": \"1810308\",\n                        \"rexNum\": \"144630094\",\n                        \"desc\": \"9 COLOSSUS 3/4\",\n                        \"prodNum\": \"144630094\",\n                        \"hearsDesc\": \"9 COLOSSUS 3/4\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                },\n                {\n                    \"num\": 6,\n                    \"qty\": 2,\n                    \"itemAmt\": 9.07,\n                    \"extendedTot\": 18.14,\n                    \"disc\": 0,\n                    \"gallons\": 0.19,\n                    \"item\": {\n                        \"salesNum\": \"1411669\",\n                        \"rexNum\": \"C22893\",\n                        \"desc\": \"001411669 PROBLOCK W\",\n                        \"prodNum\": \"C22893007\",\n                        \"hearsDesc\": \"001411669 PROBLOCK W\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                },\n                {\n                    \"num\": 7,\n                    \"qty\": 12,\n                    \"itemAmt\": 2.23,\n                    \"extendedTot\": 26.76,\n                    \"disc\": 0,\n                    \"gallons\": 0,\n                    \"item\": {\n                        \"salesNum\": \"1518323\",\n                        \"rexNum\": \"WL0950A\",\n                        \"desc\": \"950A SIL ACR LTX CLK\",\n                        \"prodNum\": \"00WL0950A\",\n                        \"hearsDesc\": \"950A SIL ACR LTX CLK\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                },\n                {\n                    \"num\": 1,\n                    \"qty\": 15,\n                    \"itemAmt\": 24.76,\n                    \"extendedTot\": 371.4,\n                    \"disc\": 0,\n                    \"gallons\": 15,\n                    \"item\": {\n                        \"salesNum\": \"650865033\",\n                        \"rexNum\": \"B20W12651\",\n                        \"desc\": \"PM 200 0 EG EXTRA\",\n                        \"prodNum\": \"B20W12651\",\n                        \"hearsDesc\": \"PM 200 0 EG EXTRA\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"OC-45 SWISS COFFEE\"\n                        }\n                    }\n                },\n                {\n                    \"num\": 2,\n                    \"qty\": 1,\n                    \"itemAmt\": 13.42,\n                    \"extendedTot\": 13.42,\n                    \"disc\": 0,\n                    \"gallons\": 0,\n                    \"item\": {\n                        \"salesNum\": \"1651017\",\n                        \"rexNum\": \"\",\n                        \"desc\": \"DESERTSTORM MEDBRK\",\n                        \"prodNum\": \".01651017\",\n                        \"hearsDesc\": \"DESERTSTORM MEDBRK\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                },\n                {\n                    \"num\": 3,\n                    \"qty\": 1,\n                    \"itemAmt\": 21.39,\n                    \"extendedTot\": 21.39,\n                    \"disc\": 0,\n                    \"gallons\": 0,\n                    \"item\": {\n                        \"salesNum\": \"651096059\",\n                        \"rexNum\": \"104956\",\n                        \"desc\": \"FROGTAPE BLUE 36MM\",\n                        \"prodNum\": \"651096059\",\n                        \"hearsDesc\": \"FROGTAPE BLUE 36MM\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                }\n            ]\n        },\n        {\n            \"hdr\": {\n                \"accountNumber\": \"674599972\",\n                \"currencyCd\": null,\n                \"custPurchOrdNum\": \"SHOP\",\n                \"purchOrdNum\": \"\",\n                \"invAmt\": 69.68,\n                \"invAmtWithTax\": 74.56,\n                \"sherlinkInvAmt\": 74.56,\n                \"totalTax\": 4.88,\n                \"invoiceId\": {\n                    \"tranDt\": \"2022-05-18\",\n                    \"termNum\": 17854,\n                    \"tranNum\": 31550\n                },\n                \"store\": {\n                    \"num\": 1428,\n                    \"numCcn\": \"701428\",\n                    \"name\": \"PLAINFIELD\"\n                },\n                \"unitNo\": \"2377 E MAIN ST\",\n                \"tranCode\": \"11\",\n                \"custJob\": {\n                    \"num\": 1,\n                    \"name\": \"ALEXANDER PAINTING LLC\"\n                }\n            },\n            \"line\": [\n                {\n                    \"num\": 2,\n                    \"qty\": 1,\n                    \"itemAmt\": 47.59,\n                    \"extendedTot\": 47.59,\n                    \"disc\": 8.4,\n                    \"gallons\": 0,\n                    \"item\": {\n                        \"salesNum\": \"9440181\",\n                        \"rexNum\": \"1160N\",\n                        \"desc\": \"PEELAWAY1 1.25G KIT\",\n                        \"prodNum\": \".09440181\",\n                        \"hearsDesc\": \"PEELAWAY1 1.25G KIT\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                },\n                {\n                    \"num\": 1,\n                    \"qty\": 1,\n                    \"itemAmt\": 22.09,\n                    \"extendedTot\": 22.09,\n                    \"disc\": 0,\n                    \"gallons\": 0,\n                    \"item\": {\n                        \"salesNum\": \"1637818\",\n                        \"rexNum\": \"\",\n                        \"desc\": \"BRICK WHITE RAGS LG\",\n                        \"prodNum\": \".01637818\",\n                        \"hearsDesc\": \"BRICK WHITE RAGS LG\",\n                        \"color\": {\n                            \"num\": \"\",\n                            \"name\": \"\"\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] QBExport Invalid Date",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}",
+										"type": "text"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}",
+										"type": "text"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-362c8798-efa7-4012-b078-1641b5886f9d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_Number}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"\":\"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 18:54:10 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.financials.api-v1+json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-RateLimit-Limit-Second",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining-Second",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "RateLimit-Reset",
+											"value": "1"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://dev-www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "6f68edd0-4439-4930-b2f1-6294ea92d574"
+										},
+										{
+											"key": "X-Kong-Upstream-Latency",
+											"value": "135"
+										},
+										{
+											"key": "X-Kong-Proxy-Latency",
+											"value": "23"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"timestamp\": \"2025-07-21 18:54:10\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"field\": \"exportCriteriaList\",\n            \"rejectedValue\": null,\n            \"message\": \"exportCriteriaList cannot be null\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "[401] QBExport Missing Auth Header",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}",
+										"type": "text"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-da9c73a5-fa70-41c7-bcb6-039689250545",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-match-request-headers",
+										"value": "Account-Number, Accept",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Accept",
+												"value": "application/vnd.financials.api-v1+json",
+												"type": "text"
+											},
+											{
+												"key": "Account-Number",
+												"value": "674599972",
+												"type": "text"
+											},
+											{
+												"key": "x-mock-match-request-headers",
+												"value": "Account-Number, Accept",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://9e503423-285c-4271-a3ae-32e3aa7a52a1.mock.pstmn.io/psg-financials-service/invoices/qbexport",
+											"protocol": "https",
+											"host": [
+												"9e503423-285c-4271-a3ae-32e3aa7a52a1",
+												"mock",
+												"pstmn",
+												"io"
+											],
+											"path": [
+												"psg-financials-service",
+												"invoices",
+												"qbexport"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 15:32:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "26"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff; always"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN; always"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "b1a2e818-0129-4bd2-bd45-0c96c7dc1497"
+										},
+										{
+											"key": "X-Kong-Response-Latency",
+											"value": "1"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthorized\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[403] QBExport No Permission",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_No_Permission}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-16acc4b6-bde5-4b81-8dea-7f7f515dcab4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_Number}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}"
+											]
+										}
+									},
+									"status": "No Permission",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 18:56:51 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.financials.api-v1+json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-RateLimit-Limit-Second",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining-Second",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "RateLimit-Reset",
+											"value": "1"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://dev-www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "faeeb525-8e18-4bfa-ad7f-f736e6078c3c"
+										},
+										{
+											"key": "X-Kong-Upstream-Latency",
+											"value": "5340"
+										},
+										{
+											"key": "X-Kong-Proxy-Latency",
+											"value": "19"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 403,\n    \"timestamp\": \"2025-07-21 18:56:51\",\n    \"title\": \"No Permission\",\n    \"detailMessage\": \"No Permission\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] QBExport Not Linked Account Number",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Not_Linked}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-response-id",
+										"value": "36524844-e9a8f6d4-c204-4131-b255-294f9de5d42d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{mock_base_url}}{{qbexport}}",
+									"host": [
+										"{{mock_base_url}}{{qbexport}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{id_token}}"
+											},
+											{
+												"key": "Accept",
+												"value": "{{accept_version}}"
+											},
+											{
+												"key": "Account-Number",
+												"value": "{{Account_Not_Linked}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"exportCriteriaList\": [\n        {\n            \"sherlinkInvAmt\": 74.56,\n            \"invoiceNum\": \"2022-05-18:17854:31550\"\n        },\n        {\n            \"sherlinkInvAmt\": 518.84,\n            \"invoiceNum\": \"2022-05-25:16206:26505\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{mock_base_url}}{{qbexport}}",
+											"host": [
+												"{{mock_base_url}}{{qbexport}}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "openresty/1.15.8.1"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Jul 2025 18:57:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.financials.api-v1+json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-RateLimit-Limit-Second",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining-Second",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "RateLimit-Reset",
+											"value": "1"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15724800; includeSubDomains"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://dev-www.sherwin-williams.com"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade; always"
+										},
+										{
+											"key": "X-Correlation-ID",
+											"value": "d4f1a33d-d568-4d0b-9d83-92c87831dd63"
+										},
+										{
+											"key": "X-Kong-Upstream-Latency",
+											"value": "2273"
+										},
+										{
+											"key": "X-Kong-Proxy-Latency",
+											"value": "19"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"timestamp\": \"2025-07-21 18:57:41\",\n    \"title\": \"Account not found\",\n    \"detailMessage\": \"Account not found\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "SearchInvoices",
+			"item": [
+				{
+					"name": "[200] SearchInvoices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{id_token}}"
+							},
+							{
+								"key": "Accept",
+								"value": "{{accept_version}}"
+							},
+							{
+								"key": "Account-Number",
+								"value": "{{Account_Number}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07",
+							"host": [
+								"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Default",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}"
+									}
+								],
+								"url": {
+									"raw": "https://9e503423-285c-4271-a3ae-32e3aa7a52a1.mock.pstmn.io/psg-financials-service/invoices/search?dateStart=2022-12-06&dateEnd=2022-12-07",
+									"protocol": "https",
+									"host": [
+										"9e503423-285c-4271-a3ae-32e3aa7a52a1",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"psg-financials-service",
+										"invoices",
+										"search"
+									],
+									"query": [
+										{
+											"key": "dateStart",
+											"value": "2022-12-06"
+										},
+										{
+											"key": "dateEnd",
+											"value": "2022-12-07"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "openresty/1.15.8.1"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jul 2025 18:46:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.financials.api-v1+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-RateLimit-Limit-Second",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining-Second",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://dev-www.sherwin-williams.com"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade; always"
+								},
+								{
+									"key": "X-Correlation-ID",
+									"value": "c168bc21-9991-4c11-91ee-9638bf5b5547"
+								},
+								{
+									"key": "X-Kong-Upstream-Latency",
+									"value": "3890"
+								},
+								{
+									"key": "X-Kong-Proxy-Latency",
+									"value": "19"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"invoices\": [\n        {\n            \"accountNumber\": \"674599972\",\n            \"invoiceNumber\": 54993,\n            \"storeNumber\": 701317,\n            \"jobNumber\": 1,\n            \"invoiceDate\": \"2022-12-06\",\n            \"amount\": 126.99,\n            \"poNumber\": null,\n            \"type\": \"INVOICE\",\n            \"invoiceType\": \"Cash Transaction\",\n            \"rowId\": \"INVOICES_6745-9997-2 5499-3 12/06 J-01_20221207032705\",\n            \"token\": \"E4F3E4D3955D023021584CC0CF588FD1ACC601EEE541FC3E2C7AEBAA1C475FA2\",\n            \"unitNumber\": \"\",\n            \"qbExported\": false,\n            \"extendedInvoiceNumber\": \"0\",\n            \"termNumber\": \"11370\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "[400] SearchInvoices Invalid Date",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{id_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "{{accept_version}}",
+								"type": "text"
+							},
+							{
+								"key": "Account-Number",
+								"value": "{{Account_Number}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apikey}}",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-id",
+								"value": "36524844-8bba839c-e2bc-4dac-aa6a-e63da4db13a3",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-1207",
+							"host": [
+								"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-1207"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Default",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Number}}"
+									}
+								],
+								"url": {
+									"raw": "https://9e503423-285c-4271-a3ae-32e3aa7a52a1.mock.pstmn.io/psg-financials-service/invoices/search",
+									"protocol": "https",
+									"host": [
+										"9e503423-285c-4271-a3ae-32e3aa7a52a1",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"psg-financials-service",
+										"invoices",
+										"search"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "openresty/1.15.8.1"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jul 2025 19:10:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.financials.api-v1+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-RateLimit-Limit-Second",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining-Second",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://dev-www.sherwin-williams.com"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade; always"
+								},
+								{
+									"key": "X-Correlation-ID",
+									"value": "6fd4693b-ac7e-46e6-a55c-279258aa8721"
+								},
+								{
+									"key": "X-Kong-Upstream-Latency",
+									"value": "173"
+								},
+								{
+									"key": "X-Kong-Proxy-Latency",
+									"value": "24"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"timestamp\": \"2025-07-21 19:10:28\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"field\": \"dateEnd\",\n            \"rejectedValue\": \"2022-1207\",\n            \"message\": \"Date must be in this format yyyy-mm-dd.\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "[401] SearchInvoices Missing Auth Header",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{id_token}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.financials.api-v1+json",
+								"type": "text"
+							},
+							{
+								"key": "Account-Number",
+								"value": "674599972",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apikey}}",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-match-request-headers",
+								"value": "Account-Number, Accept",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-id",
+								"value": "36524844-7c57361e-b0b2-4473-b212-72b4f8439c8e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07",
+							"host": [
+								"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Default",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.financials.api-v1+json",
+										"type": "text"
+									},
+									{
+										"key": "Account-Number",
+										"value": "674599972",
+										"type": "text"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{apikey}}",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-match-request-headers",
+										"value": "Account-Number, Accept",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "openresty/1.15.8.1"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jul 2025 15:32:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://www.sherwin-williams.com"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade; always"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff; always"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN; always"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block; always"
+								},
+								{
+									"key": "X-Correlation-ID",
+									"value": "ad0d510e-2438-4246-b8fb-b5c098c8d637"
+								},
+								{
+									"key": "X-Kong-Response-Latency",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[403] SearchInvoices No Permission",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{id_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "{{accept_version}}",
+								"type": "text"
+							},
+							{
+								"key": "Account-Number",
+								"value": "522627652",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apikey}}",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-match-request-headers",
+								"value": "Account-Number, Accept",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-id",
+								"value": "36524844-e01fe3fe-f052-49f4-8f93-9b270ed0a382",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07",
+							"host": [
+								"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Default",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}",
+										"type": "text"
+									},
+									{
+										"key": "Account-Number",
+										"value": "522627652",
+										"type": "text"
+									},
+									{
+										"key": "x-mock-match-request-headers",
+										"value": "Account-Number, Accept",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07"
+									]
+								}
+							},
+							"status": "No Permission",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "openresty/1.15.8.1"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jul 2025 18:49:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.financials.api-v1+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-RateLimit-Limit-Second",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining-Second",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://dev-www.sherwin-williams.com"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade; always"
+								},
+								{
+									"key": "X-Correlation-ID",
+									"value": "68328fb2-c66f-407a-a443-633edd58c297"
+								},
+								{
+									"key": "X-Kong-Upstream-Latency",
+									"value": "2579"
+								},
+								{
+									"key": "X-Kong-Proxy-Latency",
+									"value": "21"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 403,\n    \"timestamp\": \"2025-07-21 18:49:39\",\n    \"title\": \"No Permission\",\n    \"detailMessage\": \"No Permission\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[404] SearchInvoices Not Linked Account Number",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{id_token}}"
+							},
+							{
+								"key": "Accept",
+								"value": "{{accept_version}}"
+							},
+							{
+								"key": "Account-Number",
+								"value": "{{Account_Not_Linked}}"
+							},
+							{
+								"key": "x-mock-response-id",
+								"value": "36524844-3194546e-aed0-4b97-bed7-06ab6f483ce5",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07",
+							"host": [
+								"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Default",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{id_token}}"
+									},
+									{
+										"key": "Accept",
+										"value": "{{accept_version}}"
+									},
+									{
+										"key": "Account-Number",
+										"value": "{{Account_Not_Linked}}"
+									}
+								],
+								"url": {
+									"raw": "{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07",
+									"host": [
+										"{{mock_base_url}}{{search}}dateStart=2022-12-06&dateEnd=2022-12-07"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "openresty/1.15.8.1"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jul 2025 18:50:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.financials.api-v1+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-RateLimit-Limit-Second",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining-Second",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://dev-www.sherwin-williams.com"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade; always"
+								},
+								{
+									"key": "X-Correlation-ID",
+									"value": "7e74adca-a388-4612-8501-68a4b9b31a8f"
+								},
+								{
+									"key": "X-Kong-Upstream-Latency",
+									"value": "6453"
+								},
+								{
+									"key": "X-Kong-Proxy-Latency",
+									"value": "19"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"timestamp\": \"2025-07-21 18:50:48\",\n    \"title\": \"Account not found\",\n    \"detailMessage\": \"Account not found\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://9e503423-285c-4271-a3ae-32e3aa7a52a1.mock.pstmn.io"
+		}
+	]
+}

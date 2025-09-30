@@ -4,7 +4,7 @@ const fs = require("fs");
 // Load the collection
 const collectionJson = JSON.parse(
   fs.readFileSync(
-    "PSG Financial Services DEV Mock.postman_collection.json",
+    "postman/collections/36524844-74b1a0f2-9854-4383-8e16-dbd4190b89a6.json",
     "utf8"
   )
 );
@@ -35,7 +35,7 @@ item.responses.members[0].body = JSON.stringify({ date: now });
 
 // Save the updated collection
 fs.writeFileSync(
-  "PSG Financial Services DEV Mock.postman_collection.json",
+  "postman/collections/36524844-74b1a0f2-9854-4383-8e16-dbd4190b89a6.json",
   JSON.stringify(collection.toJSON(), null, 2)
 );
 console.log("Response updated successfully.");

@@ -17,25 +17,16 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "c5bbe698-1cd0-4b92-96b4-cf534fb1da1f",
+										"id": "f8bbdd98-ebf0-4c1c-9043-6c79aecfd21f",
 										"exec": [
-											"let body = [{\r",
-											"    \"_id\": \"6049efc887cda775a36bf71c\",\r",
+											"    let body2 = [{\r",
+											"    \"_id\": \"Jack\",\r",
 											"    \"age\": 39,\r",
 											"    \"eyeColor\": \"blue\",\r",
 											"    \"name\": \"Padilla Bolton\",\r",
 											"    \"greeting\": \"Hello, Padilla Bolton! You have 4 unread messages.\",\r",
 											"    \"time\": new Date().toLocaleString()\r",
 											"  }]\r",
-											"  let body2 = [{\r",
-											"    \"_id\": \"Anthony\",\r",
-											"    \"age\": 39,\r",
-											"    \"eyeColor\": \"blue\",\r",
-											"    \"name\": \"Padilla Bolton\",\r",
-											"    \"greeting\": \"Hello, Padilla Bolton! You have 4 unread messages.\",\r",
-											"    \"time\": new Date().toLocaleString()\r",
-											"  }]\r",
-											"pm.variables.set('body', JSON.stringify(body));\r",
 											"pm.environment.set('body2', JSON.stringify(body2))\r",
 											"//pm.collectionVariables.set if you want to set the varialbe inside entire collection"
 										],

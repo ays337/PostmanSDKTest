@@ -129,7 +129,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{{body2}}",
+											"raw": "{{body1}}",
 											"options": {
 												"raw": {
 													"language": "json"

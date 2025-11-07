@@ -113,6 +113,11 @@
 												"value": "Bearer {{id_token}}"
 											},
 											{
+												"key": "x-mock-response-id",
+												"value": "36524844-aff6dbfd-0628-407d-8ae9-473287bb1f6c",
+												"type": "text"
+											},
+											{
 												"key": "Accept",
 												"value": "{{accept_version}}"
 											},
@@ -127,11 +132,6 @@
 											{
 												"key": "Content-Type",
 												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "x-mock-response-id",
-												"value": "36524844-aff6dbfd-0628-407d-8ae9-473287bb1f6c",
 												"type": "text"
 											}
 										],
@@ -256,7 +256,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"result\": {{qbexport}}\r\n}\r\n\r\n"
+									"body": "{\r\n    \"result\": {{body1}}\r\n}\r\n\r\n"
 								}
 							]
 						},

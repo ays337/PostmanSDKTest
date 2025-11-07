@@ -256,7 +256,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"result\": {{mock_base_url}}\r\n}\r\n\r\n"
+									"body": "{\r\n    \"result\": {{qbexport}}\r\n}\r\n\r\n"
 								}
 							]
 						},

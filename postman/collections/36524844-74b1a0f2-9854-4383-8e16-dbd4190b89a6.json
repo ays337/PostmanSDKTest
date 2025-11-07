@@ -246,7 +246,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{{$body}}\r\n"
+									"body": "{{$body1}}\r\n"
 								}
 							]
 						},

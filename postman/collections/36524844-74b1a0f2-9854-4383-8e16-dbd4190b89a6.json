@@ -20,27 +20,15 @@
 										"id": "f8bbdd98-ebf0-4c1c-9043-6c79aecfd21f",
 										"exec": [
 											"    let body2 = [{\r",
-											"    \"_id\": \"Anthony\",\r",
+											"    \"_id\": \"Jack\",\r",
 											"    \"age\": 39,\r",
 											"    \"eyeColor\": \"blue\",\r",
-											"    \"name\": \"Anthony Safo\",\r",
-											"    \"greeting\": \"Hello, Anthony\",\r",
+											"    \"name\": \"Padilla Bolton\",\r",
+											"    \"greeting\": \"Hello, Padilla Bolton! You have 4 unread messages.\",\r",
 											"    \"time\": new Date().toLocaleString()\r",
 											"  }]\r",
 											"pm.environment.set('body2', JSON.stringify(body2))\r",
 											"//pm.collectionVariables.set if you want to set the varialbe inside entire collection"
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "0fa25737-9474-4162-b945-d757b2cc94e7",
-										"exec": [
-											"pm.environment.set('body1', pm.environment.get('body2'))"
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -53,6 +41,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [
 									{

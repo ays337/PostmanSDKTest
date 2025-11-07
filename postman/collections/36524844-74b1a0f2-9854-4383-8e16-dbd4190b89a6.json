@@ -34,6 +34,18 @@
 										"packages": {},
 										"requests": {}
 									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "0fa25737-9474-4162-b945-d757b2cc94e7",
+										"exec": [
+											"pm.environment.set('body1', pm.environment.get('body2'))"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
 								}
 							],
 							"id": "36524844-8d570f78-e0a2-45c6-8ba5-aacd3cc9fc23",

@@ -74,7 +74,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{{body2}}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -256,7 +256,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{{body2}}\r\n"
+									"body": "{{body1}}\r\n"
 								}
 							]
 						},
